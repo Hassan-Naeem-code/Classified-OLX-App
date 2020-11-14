@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Posts</title>
+    <!--ROBOTTO FONT-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap"
+        rel="stylesheet" />
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+    <!--FONT-AWESOME-->
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/Fontawesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/Fontawesome/all.css" />
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="checkUserSignIn();getDataOFSignedUser()">
+    <!--MAIN HEADER -->
+    <div class="container-fluid my-0 py-1" style="background-color: rgb(247,248, 248);">
+        <div class="row">
+            <div class="col md-3" align="right">
+                <a href="./index.html"><img src="./Logotyp_OLX_.png" alt="no use of your pc or laptop" width="100"
+                        height="80"></a>
+            </div>
+            <div class="col-md-3 mt-3">
+                <!-- <label class="sr-only" for="inlineFormInputGroup">Pakistan</label> -->
+                <div class="input-group mb-2" style="width: 250px;">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">&#9740</div>
+                    </div>
+                    <!-- <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Pakistan"
+                    style="border: 3px solid black;"> -->
+                    <select id="inputState" class="form-control" style="border: 3px solid black;padding:5px;">
+                        <option selected>Pakistan</option>
+                        <option>Punjab</option>
+                        <option>Islamabad Teritory</option>
+                        <option>Sindh</option>
+                        <option>Khyber Pakhtunkhwa</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3 mt-2">
+                <input type="text" placeholder="Find Cars, Mobile Phones and more..." name="search"
+                    style="border: 3px solid black;width: 580px;padding: 10px;margin-left: -210px;">
+                <i class="fas fa-search"
+                    style="font-size: 35px;margin-left: -3px;border: 1px solid black;position: absolute;padding: 8px;margin-top: -2px;background-color: rgb(42, 101, 234);color: whitesmoke;"></i>
+            </div>
+            <div class="col-md-3 mt-3">
+                <a href="./userlogin.html"
+                    style="font-size: 22px;font-weight: 900;margin-left: -25px;margin-right: 10px;"
+                    id="locationOfPageChange">LOGIN</a>
+                <button type="button"
+                    style="padding: 8px;font-size: 20px;color: whitesmoke;background-color: rgb(42, 101, 234);"><i
+                        class="fas fa-camera-retro"
+                        style="font-size: 20px;margin-right: 10px;color: whitesmoke;"></i>SELL</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4" align="right">
+                <a href="#" style="color: black;font-weight: 900;">All Categories<i class="fas fa-angle-down"
+                        style="color: black;margin-left: 5px;"></i></a>
+            </div>
+            <div class="col-md-8" align="left">
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">Mobile Phones</a>
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">Cars</a>
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">Motorcycles</a>
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">Houses</a>
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">TV-Video-Audio</a>
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">Tablets</a>
+                <a href="#" style="color: black;font-weight: 600;margin-right: 10px;">Land & Plots</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <img src="./OLX-banner.jpg" alt="no use of your pc or laptop" width="1885" height="470">
+        <!-- <button type="button" id="shop-Now">SHOP NOW</button> -->
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 mt-5 mb-5">
+                <h1 class="text-center text-muted"
+                    style="border: 4px solid rgb(42,101,234);color: whitesmoke;font-size: 25px;background-color:rgb(42, 101, 234);">
+                    <a href="./addProducts.html" id="products" style="color: whitesmoke;">ADD PRODUCTS</a>
+            </div>
+            <div class="col-md-4 mt-5 mb-5">
+                <h1 class="text-center text-muted"
+                    style="border: 4px solid rgb(42,101,234);color: whitesmoke;font-size: 25px;background-color: rgb(42, 101, 234);">
+                    <a href="./index.html" style="color:whitesmoke;">ALL
+                        PRODUCTS</a></h1>
+            </div>
+            <div class="col-md-4 mt-5 mb-5">
+                <h1 class="text-center text-muted"
+                    style="border: 4px solid rgb(42,101,234);color: rgb(42, 101, 234);font-size: 25px;background-color: whitesmoke;">
+                    <a href="./yourPost.html" style="color: rgb(42, 101, 234);" id="your-Posts">YOUR POSTS</a></h1>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" id="edited-TO">
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <img src="./olxBanner.png" alt="No use of your laptop or pc" width="1885">
+    </div>
+    <div class="container-fluid" style="background-color: rgb(235, 238, 239);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" style="font-size: 12px;font-family: 'Poppins';">
+                    <h4 style="font-weight: 900;font-size: 19px;">Popular Categories</h4>
+                    <ul>
+                        <li> <a href="#" style="color: gray;">Cars</a> </li>
+                        <li> <a href="#" style="color: gray;">Flats For Rent</a> </li>
+                        <li> <a href="#" style="color: gray;">Jobs</a> </li>
+                        <li> <a href="#" style="color: gray;">Mobile Phones</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" align="left" style="font-size: 12px;font-family: 'Poppins';">
+                    <h4 style="font-weight: 900;font-size: 19px;">Trending Searches</h4>
+                    <ul>
+                        <li> <a href="#" style="color: gray;">Bikes</a> </li>
+                        <li> <a href="#" style="color: gray;">Watches</a> </li>
+                        <li> <a href="#" style="color: gray;">Books</a> </li>
+                        <li> <a href="#" style="color: gray;">Dogs</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-3" align="left" style="font-size: 12px;font-family: 'Poppins';">
+                    <h4 style="font-weight: 900;font-size: 19px;">ABOUT US</h4>
+                    <ul>
+                        <li> <a href="#" style="color: gray;">About OLX Group</a> </li>
+                        <li> <a href="#" style="color: gray;">OLX Blogs</a> </li>
+                        <li> <a href="#" style="color: gray;">Contact Us</a> </li>
+                        <li> <a href="#" style="color: gray;">OLX for Buisness</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-2" align="left" style="font-size: 12px;font-family: 'Poppins';">
+                    <h4 style="font-weight: 900;font-size: 19px;">OLX</h4>
+                    <ul>
+                        <li> <a href="#" style="color: gray;">HELP</a> </li>
+                        <li> <a href="#" style="color: gray;">Sitemaps</a> </li>
+                        <li> <a href="#" style="color: gray;">Legal & Privacy Information</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-1" align="left" style="font-size: 12px;font-family: 'Poppins';">
+                    <h4 style="font-weight: 900;font-size: 15px;">FOLLOW US</h4>
+                    <a href="#"><i class="fab fa-facebook mr-1"></i><i class="fab fa-twitter mr-1"></i><i
+                            class="fab fa-youtube mr-1"></i><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: rgb(0, 47, 52);">
+        <div class="container">
+            <div class="row p-3">
+                <div class="col-md-8">
+                    <span style="color: whitesmoke;font-weight: 900;font-size: 16px;">Other Countries </span><a href="#"
+                        style="color: whitesmoke;font-size: 12px;">India -</a>
+                    <a href="#" style="color: whitesmoke;font-size: 12px;">South
+                        Africa -</a>
+                    <a href="#" style="color: whitesmoke;font-size: 12px;">Indonesia</a>
+                </div>
+                <div class="col-md-4">
+                    <span style="font-weight: 900;font-size: 16px;color: whitesmoke;">Free Classifieds In
+                        Pakistan</span>
+                    <span style="font-size: 12px;color: whitesmoke;">. &copy; 2006-2020 OLX</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-storage.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD7zD0bmSJbBJoU84pCdPyCNlYWhsDykdA",
+            authDomain: "classified-olx-web-app.firebaseapp.com",
+            databaseURL: "https://classified-olx-web-app.firebaseio.com",
+            projectId: "classified-olx-web-app",
+            storageBucket: "classified-olx-web-app.appspot.com",
+            messagingSenderId: "797466842400",
+            appId: "1:797466842400:web:173319dff5b0dcfad23345",
+            measurementId: "G-8DTTWE7QTX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>
+<!--JQUERY-->
+<script src="./bootstrap-4.5.0-dist/js/jquery.js"></script>
+<!--BOOTSTRAP JS-->
+<script src="./bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+<!--ONLINE CONNECTION FOR JQUERY AND JAVASCRIPT-->
+<!-- <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script> -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./app.js"></script>
+
+</html>
